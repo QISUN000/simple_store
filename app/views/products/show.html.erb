@@ -1,6 +1,11 @@
 <h1><%= @product.title %></h1>
 
 <div class="product-details">
+  <div class="category">
+    <h3>Category</h3>
+    <p><%= @product.category.name %></p>
+  </div>
+  
   <% if @product.description.present? %>
     <div class="description">
       <h3>Description</h3>

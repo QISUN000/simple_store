@@ -4,6 +4,7 @@
   <% @products.each do |product| %>
     <div class="product">
       <h2><%= link_to product.title, product_path(product) %></h2>
+      <p><strong>Category:</strong> <%= product.category.name %></p>
       <p><%= product.description %></p>
       <p><strong>Price:</strong> $<%= sprintf('%.2f', product.price) %></p>
       <p><strong>Stock_quantity:</strong> <%= product.stock_quantity %></p>

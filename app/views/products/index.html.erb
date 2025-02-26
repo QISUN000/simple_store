@@ -1,2 +1,12 @@
 <h1>Products#index</h1>
-<p>Find me in app/views/products/index.html.erb</p>
+
+<div class="products">
+  <% @products.each do |product| %>
+    <div class="product">
+      <h2><%= product.title %></h2>
+      <p><%= product.description %></p>
+      <p><strong>Price:</strong> $<%= sprintf('%.2f', product.price) %></p>
+      <p><strong>Stock_quantity:</strong> <%= product.stock_quantity %></p>
+    </div>
+  <% end %>
+</div>

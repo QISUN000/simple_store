@@ -45,4 +45,4 @@ puts "Created #{Product.count} products"
 #   )
 # end
 
-# puts "Created #{Product.count} products"#
+# puts "Created #{Product.count} products"

@@ -1,0 +1,24 @@
+<h1><%= @product.title %></h1>
+
+<div class="product-details">
+  <% if @product.description.present? %>
+    <div class="description">
+      <h3>Description</h3>
+      <p><%= @product.description %></p>
+    </div>
+  <% end %>
+  
+  <div class="pricing">
+    <h3>Price</h3>
+    <p>$<%= sprintf('%.2f', @product.price) %></p>
+  </div>
+  
+  <div class="stock">
+    <h3>Availability</h3>
+    <p><%= @product.stock_quantity %> in stock</p>
+  </div>
+</div>
+
+<div class="actions">
+  <%= link_to "Back to All Products", products_path %>
+</div>

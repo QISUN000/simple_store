@@ -23,10 +23,10 @@ products.each do |product_row|
   category = Category.find_or_create_by(name: product_row["category"])
   
   product = Product.create!(
-    title: product_row["title"],
+    title: product_row["name"],
     description: product_row["description"],
     price: product_row["price"],
-    stock_quantity: product_row["stock_quantity"],
+    stock_quantity: product_row["stock quantity"],
     category: category
   )
   
@@ -45,4 +45,4 @@ puts "Created #{Product.count} products"
 #   )
 # end
 
-# puts "Created #{Product.count} products"
+# puts "Created #{Product.count} products"@
